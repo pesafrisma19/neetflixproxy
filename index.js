@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const { gotScraping } = require('got-scraping');
 
 const app = express();
 
@@ -16,6 +15,7 @@ app.get('/m3u8-proxy', async (req, res) => {
     if (!targetUrl) return res.status(400).send('Missing url parameter');
 
     try {
+        const { gotScraping } = await import('got-scraping');
         const isM3u8 = targetUrl.includes('.m3u8');
         
         // gotScraping dibuat khusus untuk meniru fingerprint browser asli,
