@@ -1,0 +1,14 @@
+{
+  "name": "neetflix-proxy",
+  "version": "1.0.0",
+  "description": "M3U8 Streaming Proxy to bypass Cloudflare",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "got-scraping": "^4.0.0"
+  }
+}
